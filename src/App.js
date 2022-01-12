@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Discounted from './components/Discounted';
+import Explore from './components/Explore';
+import Featured from './components/Featured';
+import Footer from './components/Footer';
+import Highlights from './components/Highlights';
+import Landing from './components/Landing';
+import Nav from './components/Nav';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Router />
+        <Nav />
+        <Landing />
+        <Highlights />
+        <Featured />
+        <Discounted />
+        <Explore />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
